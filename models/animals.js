@@ -15,4 +15,4 @@ const animalSchema = new mongoose.Schema({
 const AnimalModel = mongoose.model('animal', animalSchema)
 
 // export
-module.export = AnimalModel;
+module.exports = AnimalModel;
