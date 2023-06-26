@@ -16,7 +16,7 @@
     <p>Location: <%= animal.location %></p>
     <p>Life Expectancy: <%= animal.lifeExpectancy %></p>
 
-    <a href="/animals/<%= animal._id%>/edit>"><button>Edit</button></a>
+    <a href="/animals/<%=animal._id%>/edit"><button>Edit</button></a>
 
     <form method="POST" action="/animals/<%=animal._id%>?_method=DELETE">
         <input type="submit" value="Delete Animal">

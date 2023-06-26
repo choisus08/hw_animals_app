@@ -51,7 +51,23 @@ app.get('/animals/:id', async (req, res) => {
 app.delete('/animals/:id', async (req, res) => {
     await Animal.findByIdAndDelete(req.params.id);
     res.redirect('/animals');
-})
+});
+
+app.get('/animals/:id/edit', async (req, res) => {
+    const animal = await Animal.findById(req.params.id);
+    res.render('edit.ejs', {animal});
+});
+
+app.put('/animals/:id', async (req, res) => {
+    if(req.body.extinct === 'on') {
+        req.body.extinct = true
+    }else {
+        req.body.extinct = false
+    }
+    await Animal.findByIdAndUpdate(req.params.id, req.body)
+    res.redirect('/animals')
+});
+
 
 
 // Listener
