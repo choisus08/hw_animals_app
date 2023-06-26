@@ -1,4 +1,3 @@
-// Using mongo db
 
 // import connection file
 const mongoose = require('./connection');
@@ -12,7 +11,7 @@ const animalSchema = new mongoose.Schema({
 });
 
 // pass model into our db
-const AnimalModel = mongoose.model('animal', animalSchema)
+const Animal = mongoose.model('animal', animalSchema)
 
 // export
-module.exports = AnimalModel;
+module.exports = Animal;
