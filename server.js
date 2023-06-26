@@ -45,10 +45,13 @@ app.post('/animals', async (req, res) => {
 
 app.get('/animals/:id', async (req, res) => {
     const foundAnimal = await Animal.findById(req.params.id);
-    res.render('show.ejs', {animal: foundAnimal})
+    res.render('show.ejs', {animal: foundAnimal});
 });
 
-
+app.delete('/animals/:id', async (req, res) => {
+    await Animal.findByIdAndDelete(req.params.id);
+    res.redirect('/animals');
+})
 
 
 // Listener
