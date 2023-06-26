@@ -43,6 +43,11 @@ app.post('/animals', async (req, res) => {
     res.redirect('/animals')
 });
 
+app.get('/animals/:id', async (req, res) => {
+    const foundAnimal = await Animal.findById(req.params.id);
+    res.render('show.ejs', {animal: foundAnimal})
+});
+
 
 
 
