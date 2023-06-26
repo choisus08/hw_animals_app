@@ -26,8 +26,25 @@ app.get('/', (req, res) => {
 
 app.get('/animals', async (req, res) => {
     const allAnimals = await Animal.find({});
-    res.render('index.ejs', { animals: allAnimals})
+    res.render('index.ejs', {animals: allAnimals})
 });
+
+app.get('/animals/new', (req, res) => {
+    res.render('new.ejs')
+});
+
+app.post('/animals', async (req, res) => {
+    if (req.body.extinct === 'on') {
+        req.body.extinct = true;
+    }else {
+        req.body.extinct = false;
+    }
+    await Animal.create(req.body);
+    res.redirect('/animals')
+});
+
+
+
 
 // Listener
 app.listen(PORT, () => {
