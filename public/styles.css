@@ -1,1 +1,11 @@
+*{
+    box-sizing: border-box;
+}
 
+body {
+    background-color: rgb(55, 122, 248);
+}
+
+h1, .list, p{
+    color: white;
+}
