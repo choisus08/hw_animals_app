@@ -5,16 +5,29 @@ const morgan = require('morgan');
 const methodOverride = require('method-override');
 const PORT = process.env.PORT;
 const app = express();
-const animalsRouter = require('./controllers/animals');
+const Animal = require('./models/animal')
+// const animalsRouter = require('./controllers/animals');
 
 // Middleware
 app.use(morgan('dev'));
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
-app.use('/animal', animalsRouter);
+// app.use('/animal', animalsRouter);
 app.use(express.json());
-app.use(animalsRouter);
+// app.use(animalsRouter);
+
+
+
+// ROUTES 
+app.get('/', (req, res) => {
+    res.send('hello world');
+});
+
+app.get('/animals', async (req, res) => {
+    const allAnimals = await Animal.find({});
+    res.render('index.ejs', { animals: allAnimals})
+});
 
 // Listener
 app.listen(PORT, () => {
