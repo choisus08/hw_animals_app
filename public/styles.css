@@ -3,9 +3,53 @@
 }
 
 body {
-    background-color: rgb(55, 122, 248);
+    background-color: rgb(245, 204, 110);
 }
 
 h1, .list, p{
+    color: rgb(63, 40, 4);
+    font-family: 'Courier New', Courier, monospace
+}
+
+.add, .delete, .edit, .home {
+    cursor: pointer;
+    font-family:'Courier New', Courier, monospace
+}
+
+.info {
+    font-weight: bold;
+}
+
+.home {
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: rgb(238, 238, 93);
+    color: black;
+    padding: .3em;
+}
+
+.add {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(186, 238, 218);
+    color: black;
+    padding: .2em;
+}
+
+.delete, .edit {
+    border: 1px solid black;
+    border-radius: 10px;
+    color: black;
+    padding: .3em;
+    margin: .5em 0;
     color: white;
+}
+
+.delete {
+    background-color: rgb(176, 140, 140);
+}
+
+.edit {
+    background-color:rgb(144, 83, 14);
+
 }
