@@ -9,21 +9,23 @@
 </head>
 <body>
 
-    <h1>Edit <%=animal.species%></h1>
+    <div class="container">
+        <h1>Edit <%=animal.species%></h1>
 
-    <form action="/animals/<%=animal._id%>?_method=PUT" method="POST">
-        Species: <input type="text" name="species" required />
-        </br>   
-        Extinct: <input type="checkbox" name="extinct" />
-        </br> 
-        Location: <input type="text" name="location" required />
-        </br> 
-        Life Expectancy: <input type="number" name="lifeExpectancy" />
-        </br> 
-        <input class="edit" type="submit" value="Save Edit" />
-    </form>
-    </br>
-    <a class="home" href="/animals">Home</a>
-    
+        <form class="info" action="/animals/<%=animal._id%>?_method=PUT" method="POST">
+            Species: <input type="text" name="species" required />
+            </br>   
+            Extinct: <input type="checkbox" name="extinct" />
+            </br> 
+            Location: <input type="text" name="location" required />
+            </br> 
+            Life Expectancy: <input type="number" name="lifeExpectancy" />
+            </br> 
+            <input class="edit" type="submit" value="Save Edit" />
+        </form>
+        </br>
+        <a class="home" href="/animals">Home</a>
+    </div>
+
 </body>
 </html>

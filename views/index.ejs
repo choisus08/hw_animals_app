@@ -8,19 +8,20 @@
     <%- include('./imports.ejs') %>
 </head>
 <body>
+    <div class="container">
+        <h1>Animals</h1>
+        <ul>
+            <% animals.forEach(animal => { %>
+                <li>
+                    <a class="list" href="/animals/<%=animal._id %>"><%= animal.species %></a>
+                </li>
+            <% }) %>
+        </ul>
 
-    <h1>Animals</h1>
-    <ul>
-        <% animals.forEach(animal => { %>
-            <li>
-                <a class="list" href="/animals/<%=animal._id %>"><%= animal.species %></a>
-            </li>
-        <% }) %>
-    </ul>
-
-    <nav>
-        <a class="add" href="/animals/new">Add Animal</a>
-    </nav>
+        <nav>
+            <a class="add" href="/animals/new">Add Animal</a>
+        </nav>
+    </div>
 
     
 </body>

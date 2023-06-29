@@ -9,21 +9,23 @@
 </head>
 <body>
 
-    <h1>Add New Animal</h1>
-    <form action="/animals" method="POST">
-        Species: <input type="text" name="species" required />
-        </br>   
-        Extinct: <input type="checkbox" name="extinct" />
-        </br> 
-        Location: <input type="text" name="location" required />
-        </br> 
-        Life Expectancy: <input type="number" name="lifeExpectancy" />
-        </br> 
-        <input class="add" type="submit" value="Add Animal" />
-    </form>
-</br>
-    <a class="home" href="/animals">Home</a>
-    
+    <div class="container">
+        <h1>Add New Animal</h1>
+        <form action="/animals" method="POST">
+            Species: <input type="text" name="species" required />
+            </br>   
+            Extinct: <input type="checkbox" name="extinct" />
+            </br> 
+            Location: <input type="text" name="location" required />
+            </br> 
+            Life Expectancy: <input type="number" name="lifeExpectancy" />
+            </br> 
+            <input class="add" type="submit" value="Add Animal" />
+        </form>
+        </br>
+
+        <a class="home" href="/animals">Home</a>
+    </div>
     
 </body>
 </html>

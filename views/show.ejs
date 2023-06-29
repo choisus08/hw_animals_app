@@ -9,19 +9,21 @@
 </head>
 <body>
 
-    <a class="home" href="/animals">Home</a>
+    <div class="container">
+        <a class="home" href="/animals">Home</a>
 
-    <h1><%= animal.species %></h1>
+        <h1><%= animal.species %></h1>
 
-    <p class="info">Extinct: <%= animal.extinct %></p>
-    <p class="info">Location: <%= animal.location %></p>
-    <p class="info">Life Expectancy: <%= animal.lifeExpectancy %></p>
+        <p class="info">Extinct: <%= animal.extinct %></p>
+        <p class="info">Location: <%= animal.location %></p>
+        <p class="info">Life Expectancy: <%= animal.lifeExpectancy %></p>
 
-    <a href="/animals/<%=animal._id%>/edit"><button class="edit">Edit</button></a>
+        <a href="/animals/<%=animal._id%>/edit"><button class="edit">Edit</button></a>
 
-    <form method="POST" action="/animals/<%=animal._id%>?_method=DELETE">
-        <input class="delete" type="submit" value="Delete Animal">
-    </form>
-    
+        <form method="POST" action="/animals/<%=animal._id%>?_method=DELETE">
+            <input class="delete" type="submit" value="Delete Animal">
+        </form>
+    </div>
+
 </body>
 </html>

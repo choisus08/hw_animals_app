@@ -13,7 +13,6 @@ app.use(morgan('dev'));
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
-// app.use('/animal', animalsRouter);
 app.use(express.json());
 app.use(animalsRouter);
 
